@@ -5,7 +5,7 @@ using namespace tinyxml2;
 
 int main() {
   XMLDocument doc;
-  doc.LoadFile("example.xml");
+  doc.LoadFile("titanic.xml");
 
   // check for errors while loading the file
   if (doc.ErrorID() != 0) {

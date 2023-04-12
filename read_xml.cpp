@@ -28,7 +28,7 @@ int main()
 	for (XMLElement* elem = root->FirstChildElement(); elem != NULL; elem = elem->NextSiblingElement())
 	{
 		// get the element name and value
-		const char* name = elem->Name();
+		const char* name = elem->Name();	
 		const char* value = elem->GetText();
 
 		// print the element name and value

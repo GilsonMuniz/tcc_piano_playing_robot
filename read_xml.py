@@ -1,25 +1,29 @@
 import xml.etree.ElementTree as ET
 
-def print_xml(filename):
+def parse_xml(filename):
     tree = ET.parse(filename)
     root = tree.getroot()
 
-    print(f'Root element: {root.tag}')
+    music = []
+    extract_notes(root, music)
 
-    print('\n--- XML Content ---')
-    print_element(root)
+    return music
 
-def print_element(element, indent=''):
-    print(f'{indent}<{element.tag}>')
+def extract_notes(element, music):
+    for note in element.iter('note'):
+        step_element = note.find('.//step')
+        octave_element = note.find('.//octave')
+        duration_element = note.find('.//duration')
 
-    for child in element:
-        print_element(child, indent + '  ')
+        if step_element is not None and octave_element is not None and duration_element is not None:
+            step = step_element.text
+            octave = octave_element.text
+            duration = duration_element.text
 
-    if element.text and element.text.strip():
-        print(f"{indent}  {element.text.strip()}")
-
-    print(f'{indent}</{element.tag}>')
+            note_data = {'step': step, 'octave': octave, 'duration': duration}
+            music.append(note_data)
 
 # Usage example
-xml_file = "titanic.xml"
-print_xml(xml_file)
+xml_file = 'titanic.xml'
+music_list = parse_xml(xml_file)
+print(music_list)

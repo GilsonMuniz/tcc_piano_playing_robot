@@ -15,12 +15,18 @@ def extract_notes(element, music):
         step_element = note.find('.//step')
         octave_element = note.find('.//octave')
         duration_element = note.find('.//duration')
+        rest_element = note.find('.//rest')
 
         if step_element is not None and octave_element is not None and duration_element is not None:
             step = step_element.text
             octave = octave_element.text
             duration = duration_element.text
-
+            note_data = {'step': step, 'octave': octave, 'duration': duration}
+            music.append(note_data)
+        elif rest_element is not None and duration_element is not None:
+            step = 'R' # rest
+            octave = '-'
+            duration = duration_element.text
             note_data = {'step': step, 'octave': octave, 'duration': duration}
             music.append(note_data)
 
@@ -42,5 +48,5 @@ for note in music_list:
     sheet.append(row)
 
 # Save the workbook
-output_file = 'tristeza.xlsx'
+output_file = 'titanic.xlsx'
 workbook.save(output_file)

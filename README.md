@@ -45,4 +45,12 @@
         <voice>1</voice>
     </note>
 </measure>
+<measure number="16">
+    <note>
+        <rest measure="yes"/> <!-- pausa -->
+        <duration>24</duration>
+        <dot/> <!-- ponto de aumento -->
+        <staff>1</staff>
+    </note>
+</measure>
 ```

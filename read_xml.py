@@ -42,5 +42,5 @@ for note in music_list:
     sheet.append(row)
 
 # Save the workbook
-output_file = 'titanic.xlsx'
+output_file = 'tristeza.xlsx'
 workbook.save(output_file)

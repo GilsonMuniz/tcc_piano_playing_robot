@@ -4,10 +4,8 @@ from openpyxl import Workbook
 def parse_xml(filename):
     tree = ET.parse(filename)
     root = tree.getroot()
-
     music = []
     extract_notes(root, music)
-
     return music
 
 def extract_notes(element, music):

@@ -61,7 +61,7 @@ Após ser executado o script Python para tradução do arquivo XML, é gerada um
 Cada linha da matriz, representa uma nota a ser tocada na música, sendo representada pelas 3 células que a definem: **Step**, **Octave** e **Duration**.
 - **Step** define a [cifra](https://pt.wikipedia.org/wiki/Cifra_(música));
 - **Octave** representa a [oitava](https://pt.wikipedia.org/wiki/Oitava);
-- **Duration** indica a duração da nota;
+- **Duration** indica o tempo de duração da nota;
 
 Exemplo de tabela gerada:
 

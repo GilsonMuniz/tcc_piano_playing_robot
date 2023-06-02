@@ -6,7 +6,7 @@
 - Tocar arquivos **.xml** online: [freetomik.github.io](https://freetomik.github.io), [soundslice.com/musicxml-viewer](https://www.soundslice.com/musicxml-viewer/)
 - Software para tocar arquivos **.musicxml**: [https://www.nch.com.au/notation/index.html](https://www.nch.com.au/notation/index.html)
 
-## Estrutura do XML
+## Estrutura do **XML**
 ``` xml
 <measure number="1"> <!-- compasso 1 -->
     <attributes>
@@ -54,3 +54,29 @@
     </note>
 </measure>
 ```
+
+## Estrutura do **XLSX**
+
+Após ser executado o script Python para tradução do arquivo XML, é gerada uma tabela que contém 3 colunas, que será lida pelo microcontrolador.
+Cada linha da matriz, representa uma nota a ser tocada na música, sendo representada pelas 3 células que a definem: **Step**, **Octave** e **Duration**.
+- **Step** define a [cifra](https://pt.wikipedia.org/wiki/Cifra_(música));
+- **Octave** representa a [oitava](https://pt.wikipedia.org/wiki/Oitava);
+- **Duration** indica a duração da nota;
+
+Exemplo de tabela gerada:
+
+| Step | Octave | Duration |
+|------|--------|----------|
+| F    | 4      | 8        |
+| G    | 4      | 8        |
+| A    | 4      | 48       |
+| G    | 4      | 8        |
+| F    | 4      | 8        |
+| G    | 4      | 16       |
+| C    | 5      | 32       |
+| B    | 4      | 8        |
+| A    | 4      | 8        |
+| F    | 4      | 16       |
+| D    | 4      | 16       |
+| ...  | ...    | ...      |
+| D    | 4      | 64       |

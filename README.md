@@ -81,4 +81,4 @@ Exemplo de tabela gerada:
 | D    | 4      | 64       |
 
 ## Tipos de nota
-<img src="docs\notes-values.png" width="200">
+<img src="docs\notes-values.png" width="260">

@@ -47,4 +47,4 @@ for note in music_list:
 
 # Save the workbook
 output_file = 'titanic.xlsx'
-workbook.save(output_file)
+workbook.save(f'excel_scores/{output_file}')

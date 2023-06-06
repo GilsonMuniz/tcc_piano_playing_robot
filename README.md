@@ -12,7 +12,7 @@
     <attributes>
         <divisions>16</divisions>
         <key>
-            <fifths>0</fifths>
+            <fifths>0</fifths> <!-- sustenidos -->
         </key>
         <staves>1</staves>
         <clef number="1"> <!-- clave 1 -->

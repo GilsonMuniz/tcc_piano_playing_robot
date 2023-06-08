@@ -76,7 +76,7 @@
 ## Estrutura do **XLSX**
 Após ser executado o script Python para tradução do arquivo XML, é gerada uma tabela que contém 3 colunas, que será lida pelo microcontrolador.
 Cada linha da matriz, representa uma nota a ser tocada na música, sendo representada pelas 3 células que a definem: **Step**, **Octave** e **Duration**.
-- **Step** define a [cifra](https://pt.wikipedia.org/wiki/Cifra_(música)), podendo ser acrescentado **#** ou **b** após a letra, para indicar [sustenido](https://pt.wikipedia.org/wiki/Sustenido) e [bemol](https://pt.wikipedia.org/wiki/Bemol), respectivamente;
+- **Step** define a [cifra](https://pt.wikipedia.org/wiki/Cifra_(música)), podendo ser acrescentado **'#'** ou **'b'** após a letra, para indicar [sustenido](https://pt.wikipedia.org/wiki/Sustenido) e [bemol](https://pt.wikipedia.org/wiki/Bemol), respectivamente;
 - **Octave** representa a [oitava](https://pt.wikipedia.org/wiki/Oitava);
 - **Duration** indica o tempo de duração da nota;
 

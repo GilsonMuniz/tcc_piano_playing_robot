@@ -94,9 +94,9 @@ Exemplo de tabela gerada:
 | B    | 4      | 8        |
 | A    | 4      | 8        |
 | F    | 4      | 16       |
-| D    | 4      | 16       |
+| D#   | 4      | 16       |
 | ...  | ...    | ...      |
-| D    | 4      | 64       |
+| Bb   | 4      | 16       |
 
 ## Tipos de nota
 <img src="docs\notes-values.png" width="260">

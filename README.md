@@ -4,7 +4,7 @@
 - Exemplo de partitura em XML: [www.w3.org/2021/06/musicxml40/tutorial/introduction/](https://www.w3.org/2021/06/musicxml40/tutorial/introduction/)
 - Converter XML para C++: [linuxhint.com/parse_xml_in_cpp/](https://linuxhint.com/parse_xml_in_cpp/)
 - Tocar arquivos **.xml** online: [freetomik.github.io](https://freetomik.github.io), [soundslice.com/musicxml-viewer](https://www.soundslice.com/musicxml-viewer/)
-- Software para tocar arquivos **.musicxml**: [https://www.nch.com.au/notation/index.html](https://www.nch.com.au/notation/index.html)
+- Software para tocar arquivos **.musicxml**: [nch.com.au/notation/index.html](https://www.nch.com.au/notation/index.html)
 
 ## Estrutura do **XML**
 ``` xml

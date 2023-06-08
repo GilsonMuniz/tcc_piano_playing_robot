@@ -7,7 +7,7 @@
 - Software para tocar arquivos **.musicxml**: [https://www.nch.com.au/notation/index.html](https://www.nch.com.au/notation/index.html)
 
 ## Estrutura do **XML**
-`titanic.xml`
+titanic.xml
 ``` xml
 <measure number="1"> <!-- compasso 1 -->
     <attributes>

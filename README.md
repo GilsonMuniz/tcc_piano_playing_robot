@@ -7,12 +7,13 @@
 - Software para tocar arquivos **.musicxml**: [https://www.nch.com.au/notation/index.html](https://www.nch.com.au/notation/index.html)
 
 ## Estrutura do **XML**
+`titanic.xml`
 ``` xml
 <measure number="1"> <!-- compasso 1 -->
     <attributes>
         <divisions>16</divisions>
         <key>
-            <fifths>0</fifths> <!-- sustenidos -->
+            <fifths>0</fifths> <!-- (+) sustenidos na armadura de clave -->
         </key>
         <staves>1</staves>
         <clef number="1"> <!-- clave 1 -->
@@ -23,7 +24,7 @@
     <note> <!-- nota -->
         <pitch>
             <step>F</step> <!-- fá -->
-            <alter>0</alter>
+            <alter>0</alter> <!-- (+) sustenido na nota -->
             <octave>4</octave> <!-- oitava 4 -->
         </pitch>
         <duration>8</duration> <!-- duração 8 -->
@@ -53,6 +54,21 @@
         <staff>1</staff>
     </note>
 </measure>
+<measure number="19">
+    ...
+    <note>
+        <pitch>
+            <step>B</step>
+            <alter>-1</alter> <!-- (-) bemol na nota -->
+            <octave>4</octave>
+        </pitch>
+        <duration>16</duration>
+        <type>quarter</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <voice>1</voice>
+    </note>
+    ...
 ```
 
 ## Estrutura do **XLSX**

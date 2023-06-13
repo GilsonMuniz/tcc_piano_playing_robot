@@ -33,7 +33,10 @@ def extract_notes(element, music):
             music.append(note_data)
 
 # Usage example
-xml_file = 'tristeza.xml'
+print('Music Name:', end='')
+file_name = input()
+
+xml_file = f'{file_name}.xml'
 music_list = parse_xml(xml_file)
 
 # Create an Excel workbook and select the active sheet
@@ -50,5 +53,5 @@ for note in music_list:
     sheet.append(row)
 
 # Save the workbook
-output_file = 'tristeza.xlsx'
+output_file = f'{file_name}.xlsx'
 workbook.save(f'excel_scores/{output_file}')

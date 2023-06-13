@@ -39,7 +39,7 @@ def extract_notes(element, music):
 print('Music Name: ', end='')
 file_name = input()
 
-xml_file = f'{file_name}.xml'
+xml_file = f'{file_name}.musicxml'
 music_list = parse_xml(xml_file)
 
 # Create an Excel workbook and select the active sheet

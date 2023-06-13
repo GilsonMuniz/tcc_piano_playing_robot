@@ -15,6 +15,7 @@ def extract_notes(element, music):
         octave_element = note.find('.//octave')
         duration_element = note.find('.//duration')
         rest_element = note.find('.//rest')
+        chord_element = note.find('.//chord')
 
         if step_element is not None and octave_element is not None and duration_element is not None:
             step = step_element.text
@@ -22,18 +23,20 @@ def extract_notes(element, music):
             duration = int(duration_element.text)
             alter = int(alter_element.text)
             if alter == 1: step += '#'
-            if alter == -1: step += 'b'
-            note_data = {'step': step, 'octave': octave, 'duration': duration}
-            music.append(note_data)
+            elif alter == -1: step += 'b'
+            if chord_element is not None: chord = True
+            else: chord = False
+            note_data = {'step': step, 'octave': octave, 'chord': chord, 'duration': duration}
         elif rest_element is not None and duration_element is not None:
             step = 'R' # rest
             octave = '-'
+            chord = '-'
             duration = int(duration_element.text)
-            note_data = {'step': step, 'octave': octave, 'duration': duration}
-            music.append(note_data)
+            note_data = {'step': step, 'octave': octave, 'chord': chord, 'duration': duration}
+        music.append(note_data)
 
 # Usage example
-print('Music Name:', end='')
+print('Music Name: ', end='')
 file_name = input()
 
 xml_file = f'{file_name}.xml'
@@ -44,12 +47,12 @@ workbook = Workbook()
 sheet = workbook.active
 
 # Write the header row
-header_row = ['Step', 'Octave', 'Duration']
+header_row = ['Step', 'Octave', 'Chord', 'Duration']
 sheet.append(header_row)
 
 # Write the music data rows
 for note in music_list:
-    row = [note['step'], note['octave'], note['duration']]
+    row = [note['step'], note['octave'], note['chord'], note['duration']]
     sheet.append(row)
 
 # Save the workbook

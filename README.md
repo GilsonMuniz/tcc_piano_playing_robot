@@ -115,21 +115,21 @@ Cada linha da matriz, representa uma nota a ser tocada na música, sendo represe
 
 Exemplo de tabela gerada:
 
-| Step | Octave | Duration |
-|------|--------|----------|
-| F    | 4      | 8        |
-| G    | 4      | 8        |
-| A    | 4      | 48       |
-| G    | 4      | 8        |
-| F    | 4      | 8        |
-| G    | 4      | 16       |
-| C    | 5      | 32       |
-| B    | 4      | 8        |
-| A    | 4      | 8        |
-| F    | 4      | 16       |
-| D#   | 4      | 16       |
-| ...  | ...    | ...      |
-| Bb   | 4      | 16       |
+| Step | Octave | Chord | Duration |
+|------|--------|-------|----------|
+| G    | 4      | false | 8        |
+| G    | 4      | false | 4        |
+| G    | 4      | false | 4        |
+| G    | 4      | false | 16       |
+| G    | 4      | false | 8        |
+| C    | 5      | false | 8        |
+| E    | 5      | false | 32       |
+| C    | 5      | true  | 32       |
+| Eb   | 5      | false | 24       |
+| C#   | 5      | true  | 24       |
+| R    | -      | -     | 8        |
+| A    | 4      | false | 8        |
+
 
 ## Tipos de nota
 <img src="docs\notes-values.png" width="260">

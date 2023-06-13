@@ -2,8 +2,7 @@
 
 - Conversor de partitura para XML: [github.com/BreezeWhite/oemer](https://github.com/BreezeWhite/oemer)
 - Exemplo de partitura em XML: [www.w3.org/2021/06/musicxml40/tutorial/introduction/](https://www.w3.org/2021/06/musicxml40/tutorial/introduction/)
-- Tocar arquivos **.xml** online: [freetomik.github.io](https://freetomik.github.io), [soundslice.com/musicxml-viewer](https://www.soundslice.com/musicxml-viewer/)
-- Software para tocar arquivos **.musicxml**: [nch.com.au/notation/index.html](https://www.nch.com.au/notation/index.html)
+- Tocar arquivos **.xml** e **.musicxml** online: [soundslice.com/musicxml-viewer](https://www.soundslice.com/musicxml-viewer/)
 - Apresentação do projeto: [bit.ly/PianoPlayingRobot](https://bit.ly/PianoPlayingRobot)
 
 ## Estrutura do **XML**
@@ -71,6 +70,40 @@
     </note>
     <!-- ... -->
 <!-- ... -->
+```
+``` xml
+<!-- cidade_maravilhosa.xml -->
+
+<!-- ... -->
+<measure number="3">
+    <note>
+        <pitch>
+            <step>E</step>
+            <alter>0</alter>
+            <octave>5</octave>
+        </pitch>
+        <duration>32</duration>
+        <type>half</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <voice>1</voice>
+    </note>
+    <note>
+        <chord/> <!-- acorde com a última nota -->
+        <pitch>
+            <step>C</step>
+            <alter>0</alter>
+            <octave>5</octave>
+        </pitch>
+        <duration>32</duration>
+        <type>half</type>
+        <stem>down</stem>
+        <staff>1</staff>
+        <voice>1</voice>
+    </note>
+</measure>
+<!-- ... -->
+
 ```
 
 ## Estrutura do **XLSX**

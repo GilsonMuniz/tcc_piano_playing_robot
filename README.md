@@ -134,12 +134,12 @@ Exemplo de tabela gerada:
 
 
 ## Tipos de nota
-| Symbol                                             | Name               | Duration |
-|----------------------------------------------------|--------------------|----------|
-| <img src="docs\semibreve.svg" width="50">          | Semibreve          | 64       |
-| <img src="docs\minim.svg" width="50">              | Minim              | 32       |
-| <img src="docs\crotchet.svg" width="50">           | Crotchet           | 16       |
-| <img src="docs\quaver.svg" width="50">             | Quaver             | 08       |
-| <img src="docs\semiquaver.svg" width="50">         | Semiquaver         | 04       |
-| <img src="docs\demisemiquaver.svg" width="50">     | Demisemiquaver     | 02       |
-| <img src="docs\hemidemisemiquaver.svg" width="50"> | Hemidemisemiquaver | 01       |
+| Symbol                                                       | Name               | Duration |
+|--------------------------------------------------------------|--------------------|----------|
+| <img src="docs\semibreve.svg" width="50" style="margin:25%"> | Semibreve          | 64       |
+| <img src="docs\minim.svg" width="50" style="margin:24%">     | Minim              | 32       |
+| <img src="docs\crotchet.svg" width="50">                     | Crotchet           | 16       |
+| <img src="docs\quaver.svg" width="50">                       | Quaver             | 08       |
+| <img src="docs\semiquaver.svg" width="50">                   | Semiquaver         | 04       |
+| <img src="docs\demisemiquaver.svg" width="50">               | Demisemiquaver     | 02       |
+| <img src="docs\hemidemisemiquaver.svg" width="50">           | Hemidemisemiquaver | 01       |

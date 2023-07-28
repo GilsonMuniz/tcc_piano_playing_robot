@@ -134,4 +134,12 @@ Exemplo de tabela gerada:
 
 
 ## Tipos de nota
-<img src="docs\notes-values.png" width="260">
+| Symbol                                             | Name               | Duration |
+|----------------------------------------------------|--------------------|----------|
+| <img src="docs\semibreve.svg" width="50">          | Semibreve          | 64       |
+| <img src="docs\minim.svg" width="50">              | Minim              | 32       |
+| <img src="docs\crotchet.svg" width="50">           | Crotchet           | 16       |
+| <img src="docs\quaver.svg" width="50">             | Quaver             | 8        |
+| <img src="docs\semiquaver.svg" width="50">         | Semiquaver         | 4        |
+| <img src="docs\demisemiquaver.svg" width="50">     | Demisemiquaver     | 2        |
+| <img src="docs\hemidemisemiquaver.svg" width="50"> | Hemidemisemiquaver | 1        |

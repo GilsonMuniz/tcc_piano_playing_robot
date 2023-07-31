@@ -89,13 +89,14 @@ def fill_cells(sample, symbol, duration):
 table_samples = []
 sample = 1
 for command in music_commands:
-    print(command)
     if command['command'] == 'NOTE':
         if command['chord']: sample -= command['duration'] - 1
         fill_cells(sample, command['step'], command['duration'])
         sample += command['duration']
     elif command['command'] == 'REST': fill_cells(sample, 'Rest', command['duration'])
     elif command['command'] == 'BACKUP': sample -= command['duration'] - 1
+
+for row in sheet_list: sheet.append(row)
 
 # Save the workbook
 output_file = f'{file_name}.xlsx'

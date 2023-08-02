@@ -108,8 +108,10 @@
 ```
 
 ## Estrutura do **XLSX**
-Após ser executado o script Python para tradução do arquivo XML, é gerada uma tabela que contém 3 colunas, que será lida pelo microcontrolador.
-Cada linha da matriz, representa uma nota a ser tocada na música, sendo representada pelas 3 células que a definem: **Step**, **Octave**, **Chord** e **Duration**.
+Após ser executado o script Python para tradução do arquivo XML, é gerada uma tabela que contém 128 colunas, que será lida pelo microcontrolador.
+A tabela funciona como uma matriz, em que sua primeira coluna "**Sample** "indica o instante atual de tempo, sendo iniciada em 0 e terminando no tempo de duração da música. As colunas restantes, representam o estado de cada nota ou pausa naquele ponto da música, podendo ser _True_ ou _False_. A última coluna, **Rest**, representa a presença de pausa.
+Para tocar a música, o robô deverá ler linha por linha em ordem crescente conforme as amostras, e acionar as saídas digitais do microcontrolador conforme a tabela de notas e a pausa. Caso a célula lida seja _True_, será pressionada a tecla, caso contrário, não.
+
 - **Step** define a [cifra](https://pt.wikipedia.org/wiki/Cifra_(música)), podendo ser acrescentado **'#'** ou **'b'** após a letra, para indicar [sustenido](https://pt.wikipedia.org/wiki/Sustenido) e [bemol](https://pt.wikipedia.org/wiki/Bemol), respectivamente;
 - **Octave** representa a [oitava](https://pt.wikipedia.org/wiki/Oitava);
 - **Chord** indica se a nota compõe um [acorde](https://pt.wikipedia.org/wiki/Acorde);
@@ -117,21 +119,16 @@ Cada linha da matriz, representa uma nota a ser tocada na música, sendo represe
 
 Exemplo de tabela gerada:
 
-| Step | Octave | Chord | Duration |
-|------|--------|-------|----------|
-| G    | 4      | false | 8        |
-| G    | 4      | false | 4        |
-| G    | 4      | false | 4        |
-| G    | 4      | false | 16       |
-| G    | 4      | false | 8        |
-| C    | 5      | false | 8        |
-| E    | 5      | false | 32       |
-| C    | 5      | true  | 32       |
-| Eb   | 5      | false | 24       |
-| C#   | 5      | true  | 24       |
-| R    | -      | -     | 8        |
-| A    | 4      | false | 8        |
-
+| Sample | C1 | C#1 | Db1 | D1 | D#1 | Eb1  | E1 | Fb1 | E#1 | F1 | F#1 | Gb1 | G1 | G#1  | Ab1 | A1 | A#1 | Bb1 | B1 | Cb1 | B#1 | ... | Rest |
+|--------|----|-----|-----|----|-----|------|----|-----|-----|----|-----|-----|----|------|-----|----|-----|-----|----|-----|-----|-----|------|
+|        |    |     |     |    |     |      |    |     |     |    |     |     |    |      |     |    |     |     |    |     |     |     | True |
+|        |    |     |     |    |     |      |    |     |     |    |     |     |    |      |     |    |     |     |    |     |     |     | True |
+|        |    |     |     |    |     | True |    |     |     |    |     |     |    |      |     |    |     |     |    |     |     |     | True |
+|        |    |     |     |    |     | True |    |     |     |    |     |     |    |      |     |    |     |     |    |     |     |     | True |
+|        |    |     |     |    |     | True |    |     |     |    |     |     |    | True |     |    |     |     |    |     |     |     |      |
+|        |    |     |     |    |     | True |    |     |     |    |     |     |    | True |     |    |     |     |    |     |     |     |      |
+|        |    |     |     |    |     |      |    |     |     |    |     |     |    | True |     |    |     |     |    |     |     |     |      |
+|        |    |     |     |    |     |      |    |     |     |    |     |     |    | True |     |    |     |     |    |     |     |     |      |
 
 ## Tipos de nota
 | Symbol                                             | Name               | Duration |

@@ -130,13 +130,13 @@ Exemplo de tabela gerada:
 | 7      |    |     |     |    |     |      |    |     |     |    |     |     |    | True |     |    |     |     |    |     |     |     |      |
 | 8      |    |     |     |    |     |      |    |     |     |    |     |     |    | True |     |    |     |     |    |     |     |     |      |
 
-## Tipos de nota
-| Symbol                                             | Name               | Duration |
-|----------------------------------------------------|--------------------|----------|
-| <img src="docs\semibreve.svg" width="50">          | Semibreve          | 64       |
-| <img src="docs\minim.svg" width="50">              | Minim              | 32       |
-| <img src="docs\crotchet.svg" width="50">           | Crotchet           | 16       |
-| <img src="docs\quaver.svg" width="50">             | Quaver             | 08       |
-| <img src="docs\semiquaver.svg" width="50">         | Semiquaver         | 04       |
-| <img src="docs\demisemiquaver.svg" width="50">     | Demisemiquaver     | 02       |
-| <img src="docs\hemidemisemiquaver.svg" width="50"> | Hemidemisemiquaver | 01       |
+## Tipos de nota e pausas
+| Name               | Note Symbol                                        | Rest Symbol                                            | Duration |
+|--------------------|----------------------------------------------------|--------------------------------------------------------|----------|
+| Semibreve          | <img src="docs\semibreve.svg" width="50">          | <img src="docs\semibreverest.svg" width="50">          | 64       |
+| Minim              | <img src="docs\minim.svg" width="50">              | <img src="docs\minimrest.svg" width="50">              | 32       |
+| Crotchet           | <img src="docs\crotchet.svg" width="50">           | <img src="docs\crotchetrest.svg" width="50">           | 16       |
+| Quaver             | <img src="docs\quaver.svg" width="50">             | <img src="docs\quaverrest.svg" width="50">             | 08       |
+| Semiquaver         | <img src="docs\semiquaver.svg" width="50">         | <img src="docs\semiquaverrest.svg" width="50">         | 04       |
+| Demisemiquaver     | <img src="docs\demisemiquaver.svg" width="50">     | <img src="docs\demisemiquaverrest.svg" width="50">     | 02       |
+| Hemidemisemiquaver | <img src="docs\hemidemisemiquaver.svg" width="50"> | <img src="docs\hemidemisemiquaverrest.svg" width="50"> | 01       |

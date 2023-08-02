@@ -72,7 +72,7 @@ sheet_list.append(header_row)
 def fill_cells(sample, symbol, duration):
     global table_samples
     global sheet_list
-    for sample_i in range(sample, sample + duration + 1):
+    for sample_i in range(sample, sample + duration):
         if sample_i not in table_samples:
             default_row = [sample_i,
                 '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
@@ -90,11 +90,13 @@ table_samples = []
 sample = 1
 for command in music_commands:
     if command['command'] == 'NOTE':
-        if command['chord']: sample -= command['duration'] - 1
+        if command['chord']: sample -= command['duration']
         fill_cells(sample, command['step'], command['duration'])
         sample += command['duration']
-    elif command['command'] == 'REST': fill_cells(sample, 'Rest', command['duration'])
-    elif command['command'] == 'BACKUP': sample -= command['duration'] - 1
+    elif command['command'] == 'REST':
+        fill_cells(sample, 'Rest', command['duration'])
+        sample += command['duration']
+    elif command['command'] == 'BACKUP': sample -= command['duration']
 
 for row in sheet_list: sheet.append(row)
 

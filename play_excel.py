@@ -1,4 +1,5 @@
 import openpyxl
+import time
 
 header_row = ['Sample',
     'C1', 'C#1', 'Db1', 'D1', 'D#1', 'Eb1', 'E1', 'Fb1', 'E#1', 'F1', 'F#1', 'Gb1', 'G1', 'G#1', 'Ab1', 'A1', 'A#1', 'Bb1', 'B1', 'Cb1', 'B#1',
@@ -11,7 +12,7 @@ header_row = ['Sample',
 
 columns_letters = []
 for col in range(1, 131 + 1): columns_letters.append(openpyxl.utils.get_column_letter(col))
-NOTES_COLUMNS = {key: value for key, value in zip(columns_letters, header_row)}
+notes_columns = {key: value for key, value in zip(columns_letters, header_row)}
 
 print('Music Name: ', end='')
 file_name = input()
@@ -21,10 +22,14 @@ workbook = openpyxl.load_workbook(excel_file)
 worksheet = workbook['Sheet']
 music_size = worksheet.max_row
 
+BPM = 100
+SAMPLE_TIME = 60 / BPM
+
 for row in range(2, music_size + 1):
     print(f'{row}:', end=' ')
     for cell in worksheet[row][2:]:
-        if cell.value: print(NOTES_COLUMNS[cell.column_letter], end=' ')
+        if cell.value: print(notes_columns[cell.column_letter], end=' ')
+        # time.sleep(SAMPLE_TIME)
     print()
 
 workbook.close()

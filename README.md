@@ -27,7 +27,7 @@ Contém as tags note e backup.
 Contém as tags pitch, duration, type, stem, staff e voice.
 1. Pitch: indica a cifra da nota, se existe acidente e qual e a oitava;
 2. Duration: duração da nota;
-3. Type: tipo da nota conforme a =[tabela](https://github.com/gilsonmuniz/tcc_piano_playing_robot#tipos-de-nota-e-pausas);
+3. Type: tipo da nota conforme a [tabela](https://github.com/gilsonmuniz/tcc_piano_playing_robot#tipos-de-nota-e-pausas);
 4. Stem: haste da nota para cima ou para baixo;
 5. Staff: _
 6. Voice: _

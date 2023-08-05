@@ -7,104 +7,43 @@
 - Apresentação do projeto: [bit.ly/PianoPlayingRobot](https://bit.ly/PianoPlayingRobot)
 
 ## Estrutura do **XML**
-``` xml
-<!-- titanic.xml -->
 
-<measure number="1"> <!-- compasso 1 -->
-    <attributes>
-        <divisions>16</divisions>
-        <key>
-            <fifths>0</fifths> <!-- (+) sustenidos na armadura de clave -->
-        </key>
-        <staves>1</staves>
-        <clef number="1"> <!-- clave 1 -->
-            <sign>G</sign> <!-- sol -->
-            <line>2</line> <!-- inicia na linha 2 -->
-        </clef>
-    </attributes>
-    <note> <!-- nota -->
-        <pitch>
-            <step>F</step> <!-- fá -->
-            <alter>0</alter> <!-- (+) sustenido na nota -->
-            <octave>4</octave> <!-- oitava 4 -->
-        </pitch>
-        <duration>8</duration> <!-- duração 8 -->
-        <type>eighth</type> <!-- colcheia -->
-        <stem>up</stem> <!-- haste subindo -->
-        <staff>1</staff>
-        <voice>1</voice>
-    </note>
-    <note>
-        <pitch>
-            <step>G</step> <!-- sol -->
-            <alter>0</alter>
-            <octave>4</octave> <!-- oitava 4 -->
-        </pitch>
-        <duration>8</duration> <!-- duração 8 -->
-        <type>eighth</type> <!-- colcheia -->
-        <stem>up</stem> <!-- haste subindo -->
-        <staff>1</staff>
-        <voice>1</voice>
-    </note>
+### Compasso | Measure
+Contém as tags note e backup.
+- Note: nota ou pausa;
+- Backup: recuar determinado tempo ou valor no compasso.
+``` xml
+<measure number="1">
+    <note></note>
+    <note></note>
+    <backup></backup>
+    <note></note>
+    <backup></backup>
+    <note></note>
 </measure>
-<measure number="16">
-    <note>
-        <rest measure="yes"/> <!-- pausa -->
-        <duration>24</duration>
-        <dot/> <!-- ponto de aumento -->
-        <staff>1</staff>
-    </note>
-</measure>
-<measure number="19">
-    <!-- ... -->
-    <note>
-        <pitch>
-            <step>B</step>
-            <alter>-1</alter> <!-- (-) bemol na nota -->
-            <octave>4</octave>
-        </pitch>
-        <duration>16</duration>
-        <type>quarter</type>
-        <stem>down</stem>
-        <staff>1</staff>
-        <voice>1</voice>
-    </note>
-    <!-- ... -->
-<!-- ... -->
 ```
+
+### Nota ou Pausa | Note
+Contém as tags pitch, duration, type, stem, staff e voice.
+1. Pitch: indica a cifra da nota, se existe acidente e qual e a oitava;
+2. Duration: duração da nota;
+3. Type: tipo da nota conforme a =[tabela](https://github.com/gilsonmuniz/tcc_piano_playing_robot#tipos-de-nota-e-pausas);
+4. Stem: haste da nota para cima ou para baixo;
+5. Staff: _
+6. Voice: _
 ``` xml
-<!-- cidade_maravilhosa.xml -->
-
-<!-- ... -->
-<measure number="3">
-    <note>
-        <pitch>
-            <step>E</step>
-            <alter>0</alter>
-            <octave>5</octave>
-        </pitch>
-        <duration>32</duration>
-        <type>half</type>
-        <stem>down</stem>
-        <staff>1</staff>
-        <voice>1</voice>
-    </note>
-    <note>
-        <chord/> <!-- acorde com a última nota -->
-        <pitch>
-            <step>C</step>
-            <alter>0</alter>
-            <octave>5</octave>
-        </pitch>
-        <duration>32</duration>
-        <type>half</type>
-        <stem>down</stem>
-        <staff>1</staff>
-        <voice>1</voice>
-    </note>
-</measure>
-<!-- ... -->
-
+<note>
+    <pitch>
+        <step>E</step>
+        <alter>0</alter>
+        <octave>5</octave>
+    </pitch>
+    <duration>32</duration>
+    <type>half</type>
+    <stem>down</stem>
+    <staff>1</staff>
+    <voice>1</voice>
+</note>
 ```
 
 ## Estrutura do **XLSX**

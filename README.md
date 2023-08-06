@@ -57,7 +57,7 @@ Contém as tags step, alter e octave.
 
 ## Estrutura do **XLSX**
 Após ser executado o script Python para tradução do arquivo XML, é gerada uma tabela que contém 128 colunas, que será lida pelo microcontrolador.
-A tabela funciona como uma matriz, em que sua primeira coluna "**Sample** "indica o instante atual de tempo, sendo iniciada em 0 e terminando no tempo de duração da música. As colunas restantes, representam o estado de cada nota ou pausa naquele ponto da música, podendo ser _True_ ou _False_. A última coluna, **Rest**, representa a presença de pausa.
+A tabela funciona como uma matriz, em que sua primeira coluna **Sample** indica o instante atual de tempo, sendo iniciada em 0 e terminando no tempo de duração da música. As colunas restantes, representam o estado de cada nota ou pausa naquele ponto da música, podendo ser _True_ ou _False_. A última coluna, **Rest**, representa a presença de pausa.
 Para tocar a música, o robô deverá ler linha por linha em ordem crescente conforme as amostras, e acionar as saídas digitais do microcontrolador conforme a tabela de notas e a pausa. Caso a célula lida seja _True_, será pressionada a tecla, caso contrário, não.
 
 - **Step** define a [cifra](https://pt.wikipedia.org/wiki/Cifra_(música)), podendo ser acrescentado **'#'** ou **'b'** após a letra, para indicar [sustenido](https://pt.wikipedia.org/wiki/Sustenido) e [bemol](https://pt.wikipedia.org/wiki/Bemol), respectivamente;

@@ -33,17 +33,26 @@ Contém as tags pitch, duration, type, stem, staff e voice.
 6. Voice: _
 ``` xml
 <note>
-    <pitch>
-        <step>E</step>
-        <alter>0</alter>
-        <octave>5</octave>
-    </pitch>
+    <pitch></pitch>
     <duration>32</duration>
     <type>half</type>
     <stem>down</stem>
     <staff>1</staff>
     <voice>1</voice>
 </note>
+```
+
+### Pitch
+Contém as tags step, alter e octave.
+1. Step: cifra da nota;
+2. Alter: valor inteiro para representar o se há acidente e qual ele é;
+3. Octave: oitava da nota.
+``` xml
+<pitch>
+    <step>E</step>
+    <alter>0</alter>
+    <octave>5</octave>
+</pitch>
 ```
 
 ## Estrutura do **XLSX**

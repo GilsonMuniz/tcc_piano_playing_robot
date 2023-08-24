@@ -88,3 +88,6 @@ Para tocar a música, o robô deverá ler linha por linha em ordem crescente con
 | Semiquaver         | <img src="docs\semiquaver.svg" width="50">         | <img src="docs\semiquaverrest.svg" width="50">         | 04       |
 | Demisemiquaver     | <img src="docs\demisemiquaver.svg" width="50">     | <img src="docs\demisemiquaverrest.svg" width="50">     | 02       |
 | Hemidemisemiquaver | <img src="docs\hemidemisemiquaver.svg" width="50"> | <img src="docs\hemidemisemiquaverrest.svg" width="50"> | 01       |
+
+## Notas no piano
+<img src="docs\piano_notes.jpg">

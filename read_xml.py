@@ -12,9 +12,9 @@ def extract_notes(root, music_commands):
     for element in root.iter():
         if element.tag == 'note':
             note = element
-            step_element = note.find('.//step')
-            alter_element = note.find('.//alter')
-            octave_element = note.find('.//octave')
+            step_element = note.find('.//pitch//step')
+            alter_element = note.find('.//pitch//alter')
+            octave_element = note.find('.//pitch//octave')
             duration_element = note.find('.//duration')
             rest_element = note.find('.//rest')
             chord_element = note.find('.//chord')
@@ -29,7 +29,7 @@ def extract_notes(root, music_commands):
                 step = step_element.text
                 octave = octave_element.text
                 duration = int(duration_element.text)
-                alter = int(alter_element.text)
+                alter = int(alter_element.text) if alter_element is not None else 0
                 if alter == 1:
                     step += '#'
                 elif alter == -1:

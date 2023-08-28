@@ -26,11 +26,19 @@ CROTCHET_DURATION = 16
 BPM = 110
 SAMPLE_TIME = 60 / (CROTCHET_DURATION * BPM)
 
+notes_count = {}
 for row in range(2, music_size + 1):
     print(f'{row}:', end=' ')
     for cell in worksheet[row][2:]:
-        if cell.value: print(notes_columns[cell.column_letter], end=' ')
-    sleep(SAMPLE_TIME)
+        if cell.value:
+            if notes_columns[cell.column_letter] in notes_count: notes_count[notes_columns[cell.column_letter]] += 1
+            else: notes_count[notes_columns[cell.column_letter]] = 0 
+            print(notes_columns[cell.column_letter], end=' ')
+    # sleep(SAMPLE_TIME)
     print()
 
 workbook.close()
+
+print('Notas:', len(notes_count.keys()))
+for note, count in notes_count.items(): print(f'{note}: {count}')
+print()

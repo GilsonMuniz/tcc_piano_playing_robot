@@ -12,7 +12,7 @@ for row in range(2, music_size + 1):
     for cell in worksheet[row][2:]:
         if notes_columns[cell.column_letter] in NOTES_PINS:
             pin = NOTES_PINS[notes_columns[cell.column_letter]]
-            PIN.output(pin, PRESSED if cell.value else NOT_PRESSED)
+            PIN.output(pin, PRESS if cell.value else NOT_PRESS)
             if cell.value: print(notes_columns[cell.column_letter], end=' ')
     sleep(SAMPLE_TIME)
     print()

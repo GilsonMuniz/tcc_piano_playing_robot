@@ -1,7 +1,7 @@
 import openpyxl
 
-PRESSED = False
-NOT_PRESSED = True
+PRESS = False
+NOT_PRESS = True
 
 CROTCHET_DURATION = 3
 BPM = 100

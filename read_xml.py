@@ -19,16 +19,15 @@ def extract_notes(root, music_commands):
             rest_element = note.find('.//rest')
             chord_element = note.find('.//chord')
 
-            # Rest
             if rest_element is not None:
                 command = 'REST'
-                duration = int(duration_element.text)
+                duration = int(duration_element.text) if duration_element is not None else 0
                 note_data = {'command': command, 'duration': duration}
-            else:  # Note
+            else:
                 command = 'NOTE'
                 step = step_element.text
                 octave = octave_element.text
-                duration = int(duration_element.text)
+                duration = int(duration_element.text) if duration_element is not None else 0
                 alter = int(alter_element.text) if alter_element is not None else 0
                 if alter == 1:
                     step += '#'
@@ -36,7 +35,6 @@ def extract_notes(root, music_commands):
                     step += 'b'
                 chord = True if chord_element is not None else False
                 note_data = {'command': command, 'step': step + octave, 'chord': chord, 'duration': duration}
-
             music_commands.append(note_data)
 
         elif element.tag == 'backup':
@@ -100,6 +98,5 @@ for command in music_commands:
 
 for row in sheet_list: sheet.append(row)
 
-# Save the workbook
 output_file = f'{file_name}.xlsx'
 workbook.save(f'excel_scores/{output_file}')

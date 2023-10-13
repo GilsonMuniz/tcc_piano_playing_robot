@@ -90,4 +90,4 @@ Para tocar a música, o robô deverá ler linha por linha em ordem crescente con
 | Hemidemisemiquaver | <img src="docs\hemidemisemiquaver.svg" width="50"> | <img src="docs\hemidemisemiquaverrest.svg" width="50"> | 01       |
 
 ## Notas no piano
-<img src="docs\piano_notes.jpg">
+<img src="docs\piano_notes.png">

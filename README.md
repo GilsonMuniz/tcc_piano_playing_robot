@@ -81,13 +81,13 @@ Para tocar a música, o robô deverá ler linha por linha em ordem crescente con
 ## Tipos de nota e pausas
 | Name               | Note Symbol                                        | Rest Symbol                                            | Duration |
 |--------------------|----------------------------------------------------|--------------------------------------------------------|----------|
-| Semibreve          | <img src="docs\semibreve.svg" width="50">          | <img src="docs\semibreverest.svg" width="50">          | 64       |
-| Minim              | <img src="docs\minim.svg" width="50">              | <img src="docs\minimrest.svg" width="50">              | 32       |
-| Crotchet           | <img src="docs\crotchet.svg" width="50">           | <img src="docs\crotchetrest.svg" width="50">           | 16       |
-| Quaver             | <img src="docs\quaver.svg" width="50">             | <img src="docs\quaverrest.svg" width="50">             | 08       |
-| Semiquaver         | <img src="docs\semiquaver.svg" width="50">         | <img src="docs\semiquaverrest.svg" width="50">         | 04       |
-| Demisemiquaver     | <img src="docs\demisemiquaver.svg" width="50">     | <img src="docs\demisemiquaverrest.svg" width="50">     | 02       |
-| Hemidemisemiquaver | <img src="docs\hemidemisemiquaver.svg" width="50"> | <img src="docs\hemidemisemiquaverrest.svg" width="50"> | 01       |
+| Semibreve          | <img src="docs\semibreve.svg" width="50">          | <img src="docs\semibreverest.svg" width="50">          | 1        |
+| Minim              | <img src="docs\minim.svg" width="50">              | <img src="docs\minimrest.svg" width="50">              | 1/2      |
+| Crotchet           | <img src="docs\crotchet.svg" width="50">           | <img src="docs\crotchetrest.svg" width="50">           | 1/4      |
+| Quaver             | <img src="docs\quaver.svg" width="50">             | <img src="docs\quaverrest.svg" width="50">             | 1/8      |
+| Semiquaver         | <img src="docs\semiquaver.svg" width="50">         | <img src="docs\semiquaverrest.svg" width="50">         | 1/16     |
+| Demisemiquaver     | <img src="docs\demisemiquaver.svg" width="50">     | <img src="docs\demisemiquaverrest.svg" width="50">     | 1/32     |
+| Hemidemisemiquaver | <img src="docs\hemidemisemiquaver.svg" width="50"> | <img src="docs\hemidemisemiquaverrest.svg" width="50"> | 1/64     |
 
 ## Notas no piano
 <img src="docs\piano_notes.png">
